@@ -1,0 +1,27 @@
+.debug-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.debug-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.debug-header h1 {
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  color: #343a40;
+}
+
+.debug-header p {
+  color: #6c757d;
+  font-size: 1.1rem;
+}
+
+.debug-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+} 

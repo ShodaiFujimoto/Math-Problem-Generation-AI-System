@@ -1,0 +1,9 @@
+{
+  "problem_text": "方程式 x^2 - 5x + 6 = 0 を解け。",
+  "solution": {
+    "text": "方程式 x^2 - 5x + 6 = 0 を解く。\r\n                x^2 - 5x + 6 = 0\r\n                (x - 2)(x - 3) = 0\r\n                x - 2 = 0 または x - 3 = 0\r\n                x = 2 または x = 4\r\n                よって、解は x = 2, 4",
+    "answer": "x = 2, x = 4"
+  },
+  "subject": "数と式",
+  "difficulty": "高校生"
+}

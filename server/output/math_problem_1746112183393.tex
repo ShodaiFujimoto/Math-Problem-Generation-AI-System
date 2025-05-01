@@ -1,0 +1,104 @@
+\documentclass[a4paper,11pt]{article}
+
+% 日本語対応
+\usepackage{xeCJK}
+\setCJKmainfont{Yu Gothic}
+
+% 数学関連パッケージ
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+
+% 図形描画用パッケージ
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{intersections,patterns,angles,quotes,calc,fillbetween}
+
+% その他パッケージ
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{xcolor}
+
+% ページ設定
+\geometry{
+  a4paper,
+  top=25mm,
+  bottom=25mm,
+  left=25mm,
+  right=25mm
+}
+
+% 数式環境設定
+\numberwithin{equation}{section}
+\newtheorem{theorem}{定理}
+\newtheorem{lemma}[theorem]{補題}
+\newtheorem{proposition}[theorem]{命題}
+\newtheorem{corollary}[theorem]{系}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{定義}
+\newtheorem{example}[theorem]{例}
+\newtheorem{exercise}{問題}
+\theoremstyle{remark}
+\newtheorem*{remark}{注意}
+\newtheorem*{solution}{解答}
+
+% ヘッダーとフッターの設定
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{数学問題}
+\fancyhead[R]{\today}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% タイトル情報
+\title{数学問題}
+\author{数学問題生成AIシステム}
+\date{\today}
+
+% ドキュメント開始
+\begin{document}
+
+\maketitle
+
+% 問題セクション
+\section*{問題}
+
+% 問題文を挿入（変数で置換）
+以下の2問の問題に答えなさい。
+
+1. $123 + 456$を計算してください。
+
+2. $789 - 321$を計算してください。
+
+% 図形が必要な場合はここに挿入
+
+
+% 解答セクション（オプショナル - 表示したくない場合はコメントアウト）
+\section*{解答}
+
+% 解答を挿入（変数で置換）
+LaTeX形式での表記は以下の通りです。
+
+```
+\begin{enumerate}
+    \item 579,
+    \item 468.
+\end{enumerate}
+
+% 解説セクション（オプショナル - 表示したくない場合はコメントアウト）
+\section*{解説}
+
+% 解説を挿入（変数で置換）
+1. 問題「$123 + 456$」を解くには、単純に二つの数を足し合わせます。$123 + 456 = 579$です。
+
+2. 問題「$789 - 321$」を解くには、$789$から$321$を引きます。$789 - 321 = 468$です。
+
+\end{document} 

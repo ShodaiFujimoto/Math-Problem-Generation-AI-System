@@ -1,0 +1,21 @@
+{
+  "is_valid": true,
+  "score": 90,
+  "math_accuracy": {
+    "is_correct": true,
+    "error_details": "",
+    "score": 100
+  },
+  "solution_completeness": {
+    "has_all_steps": true,
+    "missing_steps": [],
+    "score": 90
+  },
+  "educational_value": {
+    "is_instructive": true,
+    "improvement_areas": [],
+    "score": 85
+  },
+  "feedback": "解答は数学的に正確で、解法ステップも完全です。",
+  "suggestions": []
+}

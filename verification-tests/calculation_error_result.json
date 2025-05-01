@@ -1,0 +1,23 @@
+{
+  "is_valid": false,
+  "score": 30,
+  "math_accuracy": {
+    "is_correct": false,
+    "error_details": "計算結果が正しくありません。x = 3が正解です。",
+    "score": 30
+  },
+  "solution_completeness": {
+    "has_all_steps": true,
+    "missing_steps": [],
+    "score": 90
+  },
+  "educational_value": {
+    "is_instructive": true,
+    "improvement_areas": [],
+    "score": 85
+  },
+  "feedback": "計算結果に誤りがあります。",
+  "suggestions": [
+    "計算結果を確認してください。x^2 - 5x + 6 = 0の解はx = 2, x = 3です。"
+  ]
+}

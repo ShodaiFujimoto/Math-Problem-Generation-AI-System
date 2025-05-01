@@ -1,0 +1,106 @@
+\documentclass[a4paper,11pt]{article}
+
+% 日本語対応
+\usepackage{xeCJK}
+\setCJKmainfont{Yu Gothic}
+
+% 数学関連パッケージ
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+
+% 図形描画用パッケージ
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% その他パッケージ
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+
+% ページ設定
+\geometry{
+  a4paper,
+  top=25mm,
+  bottom=25mm,
+  left=25mm,
+  right=25mm
+}
+
+% ヘッダーとフッターの設定
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{数学問題}
+\fancyhead[R]{\today}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% タイトル情報
+\title{数学問題}
+\author{数学問題生成AIシステム}
+\date{\today}
+
+% ドキュメント開始
+\begin{document}
+
+\maketitle
+
+% 問題セクション
+\section*{問題}
+
+% 問題文を挿入（変数で置換）
+関数 f(x) = $x^2$ のグラフを描き、$x = 1$ における接線の方程式を求めよ。
+
+% 解答セクション（オプショナル - 表示したくない場合はコメントアウト）
+\section*{解答}
+
+% 解答を挿入（変数で置換）
+$y = 2$x - 1$
+
+% 解説セクション（オプショナル - 表示したくない場合はコメントアウト）
+\section*{解説}
+
+% 解説を挿入（変数で置換）
+関数 f(x) = $x^2$ の $x = 1$ における微分係数は f'(1) = 2・x|_{$x=1$} = 2 である。よって、点 (1, 1) を通り、傾き 2 の直線の方程式は $y - 1$ = 2($x - 1$) を解いて $y = 2$x - 1$ となる。
+
+% 図形が必要な場合はここに挿入
+\begin{figure}[H]
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+      axis lines=middle,
+      xlabel=$x$,
+      ylabel=$y$,
+      
+      xmin=0, xmax=2,
+      ymin=0, ymax=4,
+      xtick={-5,...,5},
+      ytick={-5,...,5},
+      grid=both,
+      grid style={line width=.1pt, draw=gray!10},
+      major grid style={line width=.2pt,draw=gray!50},
+      axis lines=middle,
+      minor tick num=5,
+      enlargelimits={abs=0.5},
+      axis line style={latex-latex},
+      ticklabel style={font=\tiny, fill=white},
+      xlabel style={at={(ticklabel* cs:1)}, anchor=north west},
+      ylabel style={at={(ticklabel* cs:1)}, anchor=south west}
+    ]
+    \addplot[blue, domain=0:2] {x^2};
+    \addlegendentry{f(x) = x^2};
+    \addplot[red, domain=0:2] {2*x - 1};
+    \addlegendentry{y = 2x - 1};
+    \addplot[mark=*, mark size=2pt, color=red] coordinates {(1,1)};
+    \end{axis}
+  \end{tikzpicture}
+\end{figure}
+
+\end{document} 

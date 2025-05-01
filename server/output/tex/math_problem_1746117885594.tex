@@ -1,0 +1,104 @@
+\documentclass[a4paper,11pt]{article}
+
+% 日本語対応
+\usepackage{xeCJK}
+\setCJKmainfont{Yu Gothic}
+
+% 数学関連パッケージ
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+
+% 図形描画用パッケージ
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{intersections,patterns,angles,quotes,calc,fillbetween}
+
+% その他パッケージ
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{xcolor}
+
+% ページ設定
+\geometry{
+  a4paper,
+  top=25mm,
+  bottom=25mm,
+  left=25mm,
+  right=25mm
+}
+
+% 数式環境設定
+\numberwithin{equation}{section}
+\newtheorem{theorem}{定理}
+\newtheorem{lemma}[theorem]{補題}
+\newtheorem{proposition}[theorem]{命題}
+\newtheorem{corollary}[theorem]{系}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{定義}
+\newtheorem{example}[theorem]{例}
+\newtheorem{exercise}{問題}
+\theoremstyle{remark}
+\newtheorem*{remark}{注意}
+\newtheorem*{solution}{解答}
+
+% ヘッダーとフッターの設定
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{数学問題}
+\fancyhead[R]{\today}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% タイトル情報
+\title{数学問題}
+\author{数学問題生成AIシステム}
+\date{\today}
+
+% ドキュメント開始
+\begin{document}
+
+\maketitle
+
+% 問題セクション
+\section*{問題}
+
+% 問題文を挿入（変数で置換）
+関数 $f(x) = 3x - 2$ において、$x = 4$ のときの $f(x)$ の値を求めよ。
+
+% 図形が必要な場合はここに挿入
+\begin{tikzpicture}[scale=0.5]
+    % Draw axes
+    \draw[->] (-1,0) -- (6,0) node[right] {$x$};
+    \draw[->] (0,-3) -- (0,15) node[above] {$y$};
+    % Draw function
+    \draw[domain=-1:5,smooth,variable=\x,blue] plot ({\x},{3*\x-2});
+    % Mark the point (4,10)
+    \filldraw[red] (4,10) circle (2pt) node[anchor=south west] {$(4,10)$};
+    % Draw dashed lines to axes
+    \draw[dashed] (4,0) node[below] {$4$} -- (4,10) -- (0,10) node[left] {$10$};
+    % Label the function
+    \draw (5,13) node[right,blue] {$f(x) = 3x - 2$};
+\end{tikzpicture}
+
+% 解答セクション（オプショナル - 表示したくない場合はコメントアウト）
+\section*{解答}
+
+% 解答を挿入（変数で置換）
+$10$
+
+% 解説セクション（オプショナル - 表示したくない場合はコメントアウト）
+\section*{解説}
+
+% 解説を挿入（変数で置換）
+関数 $f(x) = 3x - 2$ に $x = 4$ を代入すると、$f(4) = 3 \cdot 4 - 2 = 12 - 2 = 10$ と計算される。したがって、$x = 4$ のときの $f(x)$ の値は $10$ で正しい。解答に記載されている計算過程に誤りはないが、検証結果のフィードバックに記載されたシステムエラーは、問題文や解答自体の数学的な誤りからではなく、技術的な問題によるものである。本問題の数学的内容に関しては修正が必要ないが、技術的な問題については、システムの検証プロセスを管理する側で対応が必要である。
+
+\end{document} 

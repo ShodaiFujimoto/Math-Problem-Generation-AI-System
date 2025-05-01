@@ -1,0 +1,17 @@
+{
+  "problem_spec": {
+    "subject": "不明な分野",
+    "difficulty": "不適切な難易度",
+    "format": "",
+    "count": -1,
+    "details": "",
+    "constraints": "",
+    "visualization": null
+  },
+  "chat_history": [],
+  "current_problem": null,
+  "verification_result": null,
+  "tex_content": "",
+  "pdf_path": "",
+  "status": "initial"
+}

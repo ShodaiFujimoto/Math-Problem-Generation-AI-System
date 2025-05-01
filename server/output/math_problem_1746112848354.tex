@@ -1,0 +1,128 @@
+\documentclass[a4paper,11pt]{article}
+
+% 日本語対応
+\usepackage{xeCJK}
+\setCJKmainfont{Yu Gothic}
+
+% 数学関連パッケージ
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+
+% 図形描画用パッケージ
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{intersections,patterns,angles,quotes,calc,fillbetween}
+
+% その他パッケージ
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{xcolor}
+
+% ページ設定
+\geometry{
+  a4paper,
+  top=25mm,
+  bottom=25mm,
+  left=25mm,
+  right=25mm
+}
+
+% 数式環境設定
+\numberwithin{equation}{section}
+\newtheorem{theorem}{定理}
+\newtheorem{lemma}[theorem]{補題}
+\newtheorem{proposition}[theorem]{命題}
+\newtheorem{corollary}[theorem]{系}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{定義}
+\newtheorem{example}[theorem]{例}
+\newtheorem{exercise}{問題}
+\theoremstyle{remark}
+\newtheorem*{remark}{注意}
+\newtheorem*{solution}{解答}
+
+% ヘッダーとフッターの設定
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{数学問題}
+\fancyhead[R]{\today}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% タイトル情報
+\title{数学問題}
+\author{数学問題生成AIシステム}
+\date{\today}
+
+% ドキュメント開始
+\begin{document}
+
+\maketitle
+
+% 問題セクション
+\section*{問題}
+
+% 問題文を挿入（変数で置換）
+関数 $f(x) = 2x^2 - 8x + 6$ の頂点を求めよ。
+
+% 図形が必要な場合はここに挿入
+\begin{figure}[H]
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+      axis lines=middle,
+      xlabel=$x$,
+      ylabel=$y$,
+      title={二次関数 $f(x) = 1x^2$},
+      xmin=-5, xmax=5,
+      ymin=-2, ymax=23,
+      xtick={-5,...,5},
+      ytick={-5,...,5},
+      grid=both,
+      grid style={line width=.1pt, draw=gray!10},
+      major grid style={line width=.2pt,draw=gray!50},
+      axis lines=middle,
+      minor tick num=5,
+      enlargelimits={abs=0.5},
+      axis line style={latex-latex},
+      ticklabel style={font=\tiny, fill=white},
+      xlabel style={at={(ticklabel* cs:1)}, anchor=north west},
+      ylabel style={at={(ticklabel* cs:1)}, anchor=south west}
+    ]
+    \addplot[thick, blue, domain=-5:5] {1*x^2};
+    \addlegendentry{$f(x) = 1x^2$};
+    \addplot[mark=*, mark size=3pt, color=red] coordinates {(0,0)};
+    \node[anchor=south west] at (axis cs:0,0) {頂点 $(0, 0)$};
+    \addplot[mark=*, mark size=2pt, color=blue] coordinates {(0,0)};
+    \node[anchor=south west] at (axis cs:0,0) {$x = 0.00$};
+    \addplot[mark=*, mark size=2pt, color=green] coordinates {(0,0)};
+    \node[anchor=south west] at (axis cs:0,0) {$y = 0$};
+    \end{axis}
+  \end{tikzpicture}
+\end{figure}
+
+% 解答セクション（オプショナル - 表示したくない場合はコメントアウト）
+\section*{解答}
+
+% 解答を挿入（変数で置換）
+LaTeX形式では、点の座標をそのまま記述するだけで十分です。したがって、入力文 "(2, -2)" をLaTeX形式に変換すると、以下のようになります。
+
+```
+$(2, -2)$
+
+% 解説セクション（オプショナル - 表示したくない場合はコメントアウト）
+\section*{解説}
+
+% 解説を挿入（変数で置換）
+二次関数の頂点の公式を使用して、頂点を求めます。二次関数 $f(x) = ax^2 + bx + c$ の頂点は、$\left(-\frac{b}{2a}, f\left(-\frac{b}{2a}\right)\right)$ になります。ここで、$a = 2$, $b = -8$, $c = 6$ ですから、$x$ 座標は $-\left(-\frac{8}{2 \cdot 2}\right) = 2$ です。次に、この $x = 2$ を関数 $f(x)$ に代入して、$y$ 座標を求めます。$f(2) = 2 \cdot (2)^2 - 8 \cdot (2) + 6 = 8 - 16 + 6 = -2$。よって、頂点は $(2, -2)$ です。
+
+\end{document} 

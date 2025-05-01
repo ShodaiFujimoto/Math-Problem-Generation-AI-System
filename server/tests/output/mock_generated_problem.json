@@ -1,0 +1,47 @@
+{
+  "problem_text": "次の二次関数 f(x) = x^2 - 4x + 3 と直線 g(x) = 2x - 1 のグラフの交点を求めよ。",
+  "solution": "二次関数 f(x) = x^2 - 4x + 3 と直線 g(x) = 2x - 1 のグラフの交点を求めるには、f(x) = g(x) となる x の値を求めます。\n\nx^2 - 4x + 3 = 2x - 1\nx^2 - 6x + 4 = 0\n\n二次方程式の解の公式を使うと、\na = 1, b = -6, c = 4 より、\n\nx = \\frac{6 \\pm \\sqrt{36 - 16}}{2} = \\frac{6 \\pm \\sqrt{20}}{2} = 3 \\pm \\frac{\\sqrt{5}}{\\sqrt{1}}\n\nよって、x = 3 + \\sqrt{5} または x = 3 - \\sqrt{5}\n\n交点の座標は (3 + \\sqrt{5}, 2(3 + \\sqrt{5}) - 1) と (3 - \\sqrt{5}, 2(3 - \\sqrt{5}) - 1) です。\n計算すると、(3 + \\sqrt{5}, 5 + 2\\sqrt{5}) と (3 - \\sqrt{5}, 5 - 2\\sqrt{5}) となります。",
+  "visualization": {
+    "type": "function_graph",
+    "functions": [
+      {
+        "expression": "x^2 - 4*x + 3",
+        "domain": [
+          0,
+          6
+        ],
+        "style": "blue",
+        "label": "f(x) = x^2 - 4x + 3"
+      },
+      {
+        "expression": "2*x - 1",
+        "domain": [
+          0,
+          6
+        ],
+        "style": "red",
+        "label": "g(x) = 2x - 1"
+      }
+    ],
+    "highlight_points": [
+      [
+        5.23606797749979,
+        9.47213595499958
+      ],
+      [
+        0.7639320225002102,
+        0.5278640450004204
+      ]
+    ],
+    "axes": {
+      "xrange": [
+        -1,
+        7
+      ],
+      "yrange": [
+        -2,
+        10
+      ]
+    }
+  }
+}

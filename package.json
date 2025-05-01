@@ -1,0 +1,39 @@
+{
+  "name": "math-problem-generator",
+  "version": "1.0.0",
+  "description": "数学問題生成AIシステム - LangGraphを活用したマルチエージェントアーキテクチャによる問題生成システム",
+  "main": "server/src/index.js",
+  "scripts": {
+    "start": "node server/src/index.js",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "nodemon server/src/index.js",
+    "dev:client": "cd client && npm run dev",
+    "build": "cd client && npm run build",
+    "test": "jest",
+    "test:server": "jest --config server/jest.config.js",
+    "test:client": "cd client && npm test",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "setup": "node scripts/setup.js",
+    "create-shortcut": "node scripts/create-shortcut.js",
+    "start:windows": "scripts\\start.bat",
+    "start:unix": "bash scripts/start.sh",
+    "postsetup": "node -e \"const os=require('os');console.log(os.platform()==='win32' ? '起動方法: npm run start:windows または scripts\\\\start.bat' : '起動方法: npm run start:unix または bash scripts/start.sh');\""
+  },
+  "keywords": [
+    "math",
+    "education",
+    "ai",
+    "langgraph",
+    "openai",
+    "latex",
+    "pdf"
+  ],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": ">=20.10.0",
+    "npm": ">=10.2.0"
+  }
+}

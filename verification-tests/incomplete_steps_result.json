@@ -1,0 +1,27 @@
+{
+  "is_valid": false,
+  "score": 50,
+  "math_accuracy": {
+    "is_correct": true,
+    "error_details": "",
+    "score": 100
+  },
+  "solution_completeness": {
+    "has_all_steps": false,
+    "missing_steps": [
+      "因数分解のステップが不足しています"
+    ],
+    "score": 40
+  },
+  "educational_value": {
+    "is_instructive": false,
+    "improvement_areas": [
+      "各ステップの説明を追加するとより教育的になります"
+    ],
+    "score": 60
+  },
+  "feedback": "計算結果は正確ですが、解法のステップが不足しています。",
+  "suggestions": [
+    "解法には因数分解のステップを含めてください: (x - 2)(x - 3) = 0"
+  ]
+}
